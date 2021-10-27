@@ -1,13 +1,15 @@
 <template>
-  <router-view/>
+<div>
+  <h1>hi tag</h1>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: "Tag"
 }
 </script>
 
 <style scoped>
-@import './assets/css/base.css';
+
 </style>

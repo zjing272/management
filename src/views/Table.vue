@@ -1,13 +1,15 @@
 <template>
-  <router-view/>
+<div class="table">
+  <h1>table</h1>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: "Table"
 }
 </script>
 
 <style scoped>
-@import './assets/css/base.css';
+
 </style>
