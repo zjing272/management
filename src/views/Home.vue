@@ -2,7 +2,7 @@
   <div class="home">
     <Header/>
     <Sidebar/>
-    <div class="content-box">
+    <div class="content-box" :class="{'content-collapse': collapse}">
       <Tag/>
       <div class="content">
         <router-view v-slot="{ Component }">
@@ -29,18 +29,33 @@ export default {
     Header,
     Sidebar,
     Tag
+  },
+  computed: {
+    collapse: function () {
+      return this.$store.state.collapse
+    }
   }
 }
 </script>
 
 <style scoped>
 .content-box {
-  padding-left: 250px;
+  position: absolute;
+  top: 70px;
+  left: 250px;
+  right: 0;
+  bottom: 0;
   background-color: #F0F0F0;
+  transition: left 600ms;
+  padding-bottom: 20px;
+}
+.content-collapse {
+  left: 60px;
+  transition: left 1s;
 }
 .content {
-  padding: 0 10px 0px 10px;
-  height: calc(760px - 36px - 70px);
+  padding: 0 10px;
+  height: 100%;
   overflow: scroll;
 }
 </style>

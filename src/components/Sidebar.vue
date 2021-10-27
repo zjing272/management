@@ -2,10 +2,10 @@
   <div class="sidebar">
     <el-menu
         active-text-color="#20A0FF"
-        background-color="#324157"
         text-color="#E5EDF2"
+        background-color="#324157"
         default-active="/dashboard"
-        class="el-menu-vertical-demo"
+        class="sidebar-el-menu"
         :collapse="collapse"
         unique-opened
         router
@@ -133,11 +133,17 @@ export default {
   left: 0;
   top: 70px;
   bottom: 0;
-  width: 250px;
   overflow-y: scroll;
 }
 .sidebar::-webkit-scrollbar {
   width: 0;
+}
+/*
+  not选择器，指含有sidebar-el-menu类，不含el-menu--collapse类的标签
+  菜单折叠时，标签会自动增加el-menu--collapse标签
+*/
+.sidebar-el-menu:not(.el-menu--collapse) {
+  width: 250px
 }
 .sidebar > ul {
   height: 100%;

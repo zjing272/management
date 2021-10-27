@@ -412,21 +412,6 @@ export default {
 </script>
 
 <style scoped>
-.dashboard {
-
-}
-/* 布局 */
-.bg-purple-dark {
-  background: #99a9bf;
-}
-.bg-purple {
-  background: #d3dce6;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-}
-
 /* 显示用户信息 */
 .user-card {
   width: 100%;
@@ -523,7 +508,7 @@ export default {
 
 /* echarts图 */
 .draw-card {
-  margin-top: 20px;
+  margin: 20px 0 30px 0;
 }
 
 </style>
